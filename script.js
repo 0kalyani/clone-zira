@@ -41,8 +41,28 @@ function addTask(taskName, priority, dueDate, status) {
                         </li>
                       `;
   } else if (status == "in-progress") {
+    var list = document.getElementById("in-progress");
+
+    list.innerHTML += `
+                        <li>
+                          <p>${taskName}</p>
+                          <p>${priority}</p>
+                          <p>${dueDate}</p>
+                          <p>${status}</p>
+                        </li>
+                      `;
     // add it in the column of in-progress
   } else if (status == "completed") {
     // add it in the column of completed
+    var list = document.getElementById("completed");
+
+    list.innerHTML += `
+                        <li>
+                          <p>${taskName}</p>
+                          <p>${priority}</p>
+                          <p>${dueDate}</p>
+                          <p>${status}</p>
+                        </li>
+                      `;
   }
 }
